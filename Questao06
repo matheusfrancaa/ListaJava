@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class LinhaDeCredito {
+
+	public static void main(String[] args) {
+		Scanner leitor = new Scanner(System.in);
+		
+		float vP, sB;
+		
+		System.out.println("Digite seu salário bruto: ");
+		sB = leitor.nextFloat();
+		
+		System.out.println("Qual valor da prestação deseja pagar?: ");
+		vP = leitor.nextFloat();
+		
+		if((vP) > (sB*0.30f)) {
+			System.out.println("Você não se adequa nas condições de concessão da linha de crédito, pois o valor da prestação é maior que 30% do seu salário! ");
+		}else {
+			System.out.println("Você é adequado a receber o beneficio da Linha de Crédito!");
+		}
+		
+	}
+}
