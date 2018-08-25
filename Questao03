@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Tabuada {
+	
+	public static void main(String[] args) {
+		Scanner leitor = new Scanner(System.in);
+		
+		int tabuada, operacao;
+		int i=0;
+		
+		System.out.println("Digite o número da tabuada desejada: ");
+		tabuada = leitor.nextInt();
+		System.out.println("Selecione a operação: | 1= + | 2= - | 3= x | 4= / | -> ");
+		operacao = leitor.nextInt();
+		
+			if(operacao == 1){
+				System.out.println("Você escolheu SOMAR!");
+				for(i=1;i<=10;i++){
+				System.out.println(tabuada+ "+" +i+ "=" +(tabuada+i));
+				}
+			}else if(operacao == 2){
+				System.out.println("Você escolheu SUBTRAIR!");
+				for(i=1;i<=10;i++){
+				System.out.println(tabuada+ "-" +i+ "=" +(tabuada-i));
+				}
+			}else if(operacao == 3){
+				System.out.println("Você escolheu MULTIPLICAR!");
+				for(i=1;i<=10;i++){				
+				System.out.println(tabuada+ "x" +i+ "=" +(tabuada*i));
+				}
+			}else if(operacao == 4){
+				System.out.println("Você escolheu DIVIDIR!");
+				for(i=1;i<=10;i++){
+				System.out.println(tabuada+ "/" +i+ "=" +(tabuada/i));
+				}
+			}else{
+				System.out.println("OPERAÇÃO INVÁLIDA! ");
+			}
+			
+		}
+}
