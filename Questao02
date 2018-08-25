@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class ParOuImpar {
+	
+	public static void main(String[] args) {
+	Scanner leitor = new Scanner(System.in);
+	
+	int n=1, parouimpar;
+	
+	while(n<11){
+		System.out.println(n + "° Digite um numero: ");
+		parouimpar = leitor.nextInt();
+		
+		if(parouimpar % 2 == 0){
+		System.out.println("O número é par. \n");
+		}else{
+		System.out.println("O número é impar. \n");
+		}
+	n = n + 1;
+	}
+	}
+}
