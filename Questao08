@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class Pousada {
+    
+    public static void main(String[] args) {
+        
+        String nome = null;
+        int dias = 0;
+        float ValorCliente = 0.0f;
+        float TotalPousada = 0.0f;
+        Scanner leitor = new Scanner(System.in);
+        int opcao =0;
+        
+        while(true){
+            
+            System.out.println("Informe o nome: ");
+            nome = leitor.nextLine();
+            System.out.println("Informe o número de diárias: ");
+            dias = Integer.parseInt(leitor.nextLine());
+            ValorCliente = dias * 40.0f;
+            
+            if(dias < 10){
+                ValorCliente += (dias*15);
+            }
+            if(dias > 10){
+                 ValorCliente += (dias*8);
+            }
+            
+            System.out.println("Cliente: " + nome);
+            System.out.println("Conta: " + ValorCliente);
+            
+            System.out.println("Continuar 1- Sim");
+            System.out.println("          2- Não");
+            opcao = Integer.parseInt(leitor.nextLine());
+            
+            TotalPousada += ValorCliente;
+            
+            if(opcao==2){
+                System.out.println("Total arrecadado: " + TotalPousada);
+                System.exit(0);
+            }
+        }          
+    }
+}
