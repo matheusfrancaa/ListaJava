@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Salario {
+	
+	public static void main(String[] args) {
+	Scanner leitor = new Scanner(System.in);
+	
+	String nome;
+	float salario, aumento;
+	int i = 1;
+	
+	while(i == 1){
+	System.out.println("Digite seu nome: ");
+	nome = leitor.nextLine();
+	
+	if(nome.equals("fim") || nome.equals("FIM") || nome.equals("Fim")){
+		System.out.println("------- FIM DO CÓDIGO -------");
+		break;
+	}
+	System.out.println("Digite seu salario: ");
+	salario = leitor.nextFloat();
+	leitor.nextLine();
+	
+	if((salario > 0) && (salario <= 500)){
+		salario = (salario*0.2f) + salario;
+		System.out.println(nome + " você recebeu um aumento de 20%, portanto seu novo salário será de: R$" + salario);
+		System.out.println("---------------------------------------------------------------------------------------");
+	}else{
+		System.out.println(nome + ", seu salário é de: R$" + salario + " você não tem direito a aumento!");
+		System.out.println("----------------------------------------------------------------------------");
+	}
+   }
+  }
+ }
