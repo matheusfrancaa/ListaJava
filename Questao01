@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Aumento {
+	
+	public static void main(String[] args) {
+		Scanner leitor = new Scanner(System.in);
+		
+		double salario, vlraumento, nvsalario;
+		int percaumento;
+		System.out.println("Digite seu salário atual: ");
+		salario = leitor.nextDouble();
+		
+		System.out.println("Digite o percentual de aumento: ");
+		percaumento = leitor.nextInt();
+		
+		vlraumento = (salario*percaumento)/100;
+		System.out.println("Você terá um acrescimo de R$" + vlraumento + " no seu salário.");
+		
+		nvsalario = salario + vlraumento;
+		System.out.println("Seu novo salário será de: R$" + nvsalario);
+
+	}
+}
