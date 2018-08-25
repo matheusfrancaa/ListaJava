@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Gasolina {
+
+	public static void main(String[] args) {
+		Scanner leitor = new Scanner(System.in);
+		
+		float litros, valor;
+		
+		System.out.println("Você comprou dois refrigerantes que custam R$3,00");
+		System.out.println("Digite a quantidade de litros para abastecer: ");
+		litros = leitor.nextFloat();
+		
+		litros = litros*2.5f;
+		valor = litros+6;
+		
+		System.out.println("Seu total gasto foi de: R$" + valor);
+	}
+}
